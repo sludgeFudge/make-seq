@@ -60,4 +60,4 @@ Concepts the script uses:
 === License
 
 Licensed under the link:https://choosealicense.com/licenses/mit/[BSD 2-Clause “Simplified” License.] +
-Text file is here: link:./LICENSE[]
+Text file is here: link:./LICENSE[LICENSE]
