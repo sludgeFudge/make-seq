@@ -1,0 +1,63 @@
+= README: make-seq.sh
+
+== Make Image Sequence Script
+
+Hi, this is a simple script to rename image sequences.
+Namely, it does two things:
+
+. Renumbers the image sequence from 0
+. Looks at the directory's name in which the sequence is held and prepends that name to the entire sequence.
+
+Some programs do not accept image sequences that do not start from 0, so this script fixes that.
+Some programs rely on the image sequences files being named itself and not the directory, this script fixes that too.
+
+=== Using this Script
+
+First download the script. One way is through git:
+
+[source,bash]
+----
+git clone https://github.com/sludgeFudge/make-seq
+----
+
+I move the script to `~/Videos/` for easy access.
+
+If you wish to rename an image sequence,
+simply rename the folder containing the image sequence.
+It's best practice to not use spaces so use hyphens `-` or underscores `_`.
+
+Then go into the directory and run the script.
+Ensure only the image sequence is within the directory because this script renames everything in the directory it's run in.
+
+[source,bash]
+----
+sh ~/Videos/make-seq.sh
+----
+
+=== Modifying the Script
+
+You may want to change the character that is used to separate the name and sequence number.
+By default the script uses an underscore `_`, resulting in files like `sequence_0000.tiff`.
+
+If you wish to change this, go to line 33 in `make-seq.sh`
+and change the underscore `_` to whatever you like.
+
+Or you can use the sed command.
+Here I replace the underscore `_` with a hyphen `-`:
+
+[source,bash]
+----
+sed -i.bak '33s/_/-/' make-seq.sh
+----
+
+=== Reading Material
+
+Concepts the script uses:
+
+* Bash String Manipulation: https://tldp.org/LDP/abs/html/string-manipulation.html
+* Zero Padding in Variables: https://stackoverflow.com/questions/5584470/how-to-increment-a-zero-padded-int-in-bash
+
+=== License
+
+Licensed under the link:https://choosealicense.com/licenses/mit/[BSD 2-Clause “Simplified” License.] +
+Text file is here: link:./bsd-2-clause-simplified-license.txt[].
