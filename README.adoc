@@ -54,10 +54,10 @@ sed -i.bak '33s/_/-/' make-seq.sh
 
 Concepts the script uses:
 
-* Bash String Manipulation: https://tldp.org/LDP/abs/html/string-manipulation.html
-* Zero Padding in Variables: https://stackoverflow.com/questions/5584470/how-to-increment-a-zero-padded-int-in-bash
+* Bash String Manipulation: link:https://tldp.org/LDP/abs/html/string-manipulation.html[Manipulating Strings - TLDP]
+* Zero Padding in Variables: link:https://stackoverflow.com/questions/5584470/how-to-increment-a-zero-padded-int-in-bash[How to increment a zero padded int in Bash - Stack Overflow]
 
 === License
 
 Licensed under the link:https://choosealicense.com/licenses/mit/[BSD 2-Clause “Simplified” License.] +
-Text file is here: link:./bsd-2-clause-simplified-license.txt[].
+Text file is here: link:.LICENSE[]
